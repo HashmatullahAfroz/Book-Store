@@ -1,558 +1,631 @@
 <!DOCTYPE html>
 <html lang="Us-en">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" name="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="AllfileforjQeuryandBootstrap/Bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="AllfileforjQeuryandBootstrap/lightbox.min.css">
-	<script type="text/javascript"  src="AllfileforjQeuryandBootstrap/all.js"></script><!--fontawesome -->
-	<script type="text/javascript" src="AllfileforjQeuryandBootstrap/Bootstrap.js"></script>
-	<script type="text/javascript" src="AllfileforjQeuryandBootstrap/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="AllfileforjQeuryandBootstrap/bootstrap.bundle.min.js"></script>	
-	<script type="text/javascript" src="AllfileforjQeuryandBootstrap/lightbox.js"></script>	
+	<link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+	<script type="text/javascript" src="js/lightbox.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css">
+
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+		crossorigin="anonymous"></script>
+
+	<script type='text/javascript'
+		src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"></script>
+
+
 	<link rel="icon" href="img/title-img.png">
 	<title>BookStore</title>
-<script type="text/javascript">
-	$(document).ready(function(){
-		$(window).scroll(function(e){
-			var x = $(this).scrollTop();
-			if(x >= 180){
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(window).scroll(function (e) {
+				var x = $(this).scrollTop();
+				if (x >= 180) {
 
-				$(".first-row").addClass("change");
-				$(".second-row").addClass("change2");
-			}else
-			{
-				$(".first-row").removeClass("change");
-				$(".second-row").removeClass("change2");
-			}
+					$(".first-row").addClass("change");
+					$(".second-row").addClass("change2");
+				} else {
+					$(".first-row").removeClass("change");
+					$(".second-row").removeClass("change2");
+				}
+			});
 		});
-	});
-</script>
-<style type="text/css"> 
-	body{
-		overflow-x:hidden; 
-	}
-	header{
-		background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url(img/header-bg.jpeg) fixed;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
-		height: 100vh;
-		clip-path: polygon(0 0,100% 0,100% 100%,0 90%);
-	}
-	.banner:first-letter{
-		font-size: 140px;
-		font-family: algerian;
-		color:red;
-	}
-	.imges-heart{
-		animation: heart 2s infinite;
-	}
-	@keyframes heart{
-		0%{
-			transform: scale(1);
+	</script>
+	<style type="text/css">
+		body {
+			overflow-x: hidden;
 		}
-		40%{
-			transform: scale(1.1);
+
+		header {
+			background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(img/header-bg.jpeg) fixed;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			height: 100vh;
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
 		}
-		50%{
+
+		.banner:first-letter {
+			font-size: 140px;
+			font-family: algerian;
+			color: red;
+		}
+
+		.imges-heart {
+			animation: heart 2s infinite;
+		}
+
+		@keyframes heart {
+			0% {
+				transform: scale(1);
+			}
+
+			40% {
+				transform: scale(1.1);
+			}
+
+			50% {
+				transform: scale(1.05);
+			}
+
+			80% {
+				transform: scale(1.1);
+			}
+
+			100% {
+				transform: scale(1);
+			}
+		}
+
+		.header-title {
+			text-shadow: 2px 2px 5px #aaa;
+			font-size: 50px;
+			display: inline-block;
+			font-family: algerian;
+			transition: all .5s;
+		}
+
+		.header-title:first-letter {
+			font-size: 70px;
+			font-family: gobrialo;
+		}
+
+		.header-title:hover {
+			transform: translate(-3px, -5px);
+			text-shadow: 2px 5px 10px #aaa;
+		}
+
+		/* gallery */
+		.img-gallery {
+			transition: all 0.5s;
+			backface-visibility: hidden;
+		}
+
+		.img-gallery:hover {
 			transform: scale(1.05);
 		}
-		80%{
-			transform: scale(1.1);
-		}
-		100%{
-			transform: scale(1);
-		}
-	}
-	.header-title{
-		text-shadow: 2px 2px 5px #aaa;
-		font-size:50px;
-		display: inline-block;
-		font-family: algerian;
-		transition: all .5s;
-	}
-	.header-title:first-letter{
-		font-size:70px;
-		font-family: gobrialo;
-	}
-	.header-title:hover{
-		transform:translate(-3px,-5px);
-		text-shadow: 2px 5px 10px #aaa;
-	}
-	/* gallery */
-	.img-gallery{
-		transition: all 0.5s;
-		backface-visibility: hidden;
-	}
-	.img-gallery:hover{
-		transform: scale(1.05);
-	}
-	.first-row{
-		transform: translateX(-400px);
-		opacity: 0;
-	}
-	.second-row{
-		transform: translateX(400px);
-		opacity: 0;
-	}
-	.change, .change2{
-		transform: translateX(0);
-		opacity: 1;
-		transition: all 2.5s;
-	}
-	.hovers-img{
-		box-shadow: 2px 2px 2px #333; 
-		transition:all .7s; 
-	}
-	.hovers-img:hover{
-		transform: translateY(-10px);
-		box-shadow: 2px 2px 10px #333; 
-	}
-	/* end of gallery */
-	/* Start of famouse writters */
-	.bg-writers{
-		background:linear-gradient(rgba(250,250,250,.7),rgba(250,250,250,.6)), url(img/writers-bg.jpeg) fixed;
-		background-position: center;
-		background-size: cover;
-		background-repeat: no-repeat;
-	}
-	/* End of famouse writters */
-	/* Start of suggested Book */
-	.Suggest-book{
-		height: 100vh;
-		background:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.3)), url(img/wood-bg.jpeg);
-		background-position: center;
-		background-size: cover;
-		background-repeat: no-repeat;
-	}
-	.books{
-		position: relative;
-	}
-	.book{
-		position: absolute;
-		width: 30%;
-		border-right: 10px solid #aaa;
-		border-bottom: 5px inset #777;
-		transition: all 0.5s;
-		box-shadow: 2px 2px 2px #555;
-	}
-	.book1{
-		top:20%;
-		left:30%;
-		transform: rotate(30deg);
-	}
-	.book2{
-		top:20%;
-		left:10%;
-		transform: rotate(-45deg);
-	}
-	.book3{
-		top:100px;
-		left:10%;
-		transform: rotate(-35deg);
-	}
-	.book4{
-		top:100px;
-		left:30%;
-		transform: rotate(35deg);
-	}
-	.book:hover{
-		transform: scale(1.3) rotate(0deg);
-		z-index: 50;
-		box-shadow: 4px 4px 4px #777;
-		border-right: 10px solid #ccc;
-		border-bottom: 5px inset #aaa;
-	}
-	/* End of suggested book */
-	/* video bg */
-	.sec-video{
-		position: relative;
-	}
-	.bg-video{
-		position: absolute;
-		top:0%;
-		left:0%;
-		height:100%;
-		width:100%;
-		z-index: -1;
-		opacity: .4;
-	}
-	.video{
-		object-fit: cover;
-		width: 100%;
-		height: 100%;
-	}
-	/*back of cards*/
-	.card-shadow{
-		position: relative;
-		box-shadow: 7px 7px 10px #777;
-		max-width: 450px;
-		transition: all .3s;
-		overflow: hidden;
-	}
-	.back{
-		position: absolute;
-		top:-100%;
-		background:white;
-		width: 100%;
-		height: 100%;
-		opacity: 0;
-		user-select: none;
-		pointer-events: none;
-		transition: top .3s, opacity .3s;
-	}
-	.back-content{
-		position: absolute;
-		left:50%;
-		top:50%;
-		transform: translate(-50%,-50%);
-	}
-	.rotate{
-		perspective: 100rem;
-	}
-	.rotate:hover .card-shadow{
-		transform: rotateY(180deg);
-	}
-	.rotate:hover .back{
-		top:0;
-		transform: rotateY(180deg);
-		user-select: auto;
-		pointer-events: auto;
-		opacity: 1;
-	}
-	/*end of Back cards*/
-	/*start of contacts*/
-	.contact{
-		background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)) ,url(img/header-bg.jpeg);
-		background-position: center;
-		background-size: cover;
-		background-repeat: no-repeat;
-	}
-	.bg{
-		background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)) , url(img/items-wrapper-bg.jpg) fixed;
-		background-position: center;
-		background-size: cover;
-		background-repeat: no-repeat;
-		border-radius: 5px;
-	}
-	.floating-line{
-		background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)) ;
-	}
-	/*end of contacts*/
-</style>
-</head>
-<body>
-<!-- Header -->
-<header class="d-flex align-items-center">
-	<div class="align-self-start position-absolute">
-		<img src="img/book.png" class=" img-fluid m-3" width="130px">
-	</div>
-<div class="container">
-	<div class="row">
-		<div class="col text-center">
-			<h3 class="banner display-4 text-light mb-5">We <img src="img/heart.png" width="210px" class="imges-heart img-fluid"> <span style="font-size: 140px; font-family: algerian; color:red;">R</span>eading</h3>
-			<a href="#" class="px-5 btn btn-outline-danger">CHECK OUT</a>
-		</div>
-	</div>
-</div>
-</header>	
-<!-- End of header -->
 
-<!-- start if gallery -->
-<!-- Start of title -->
-<section class="gallery">
-	<div class="container">
-		<div class="row">
-			<div class="col text-center my-5">
-				<h1 class="text-secondary font-italic header-title">THE BEST LIBRARY IN THE WORLD</h1>
+		.first-row {
+			transform: translateX(-400px);
+			opacity: 0;
+		}
+
+		.second-row {
+			transform: translateX(400px);
+			opacity: 0;
+		}
+
+		.change,
+		.change2 {
+			transform: translateX(0);
+			opacity: 1;
+			transition: all 2.5s;
+		}
+
+		.hovers-img {
+			box-shadow: 2px 2px 2px #333;
+			transition: all .7s;
+		}
+
+		.hovers-img:hover {
+			transform: translateY(-10px);
+			box-shadow: 2px 2px 10px #333;
+		}
+
+		/* end of gallery */
+		/* Start of famouse writters */
+		.bg-writers {
+			background: linear-gradient(rgba(250, 250, 250, .7), rgba(250, 250, 250, .6)), url(img/writers-bg.jpeg) fixed;
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		/* End of famouse writters */
+		/* Start of suggested Book */
+		.Suggest-book {
+			height: 100vh;
+			background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .3)), url(img/wood-bg.jpeg);
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		.books {
+			position: relative;
+		}
+
+		.book {
+			position: absolute;
+			width: 30%;
+			border-right: 10px solid #aaa;
+			border-bottom: 5px inset #777;
+			transition: all 0.5s;
+			box-shadow: 2px 2px 2px #555;
+		}
+
+		.book1 {
+			top: 20%;
+			left: 30%;
+			transform: rotate(30deg);
+		}
+
+		.book2 {
+			top: 20%;
+			left: 10%;
+			transform: rotate(-45deg);
+		}
+
+		.book3 {
+			top: 100px;
+			left: 10%;
+			transform: rotate(-35deg);
+		}
+
+		.book4 {
+			top: 100px;
+			left: 30%;
+			transform: rotate(35deg);
+		}
+
+		.book:hover {
+			transform: scale(1.3) rotate(0deg);
+			z-index: 50;
+			box-shadow: 4px 4px 4px #777;
+			border-right: 10px solid #ccc;
+			border-bottom: 5px inset #aaa;
+		}
+
+		/* End of suggested book */
+		/* video bg */
+		.sec-video {
+			position: relative;
+		}
+
+		.bg-video {
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			height: 100%;
+			width: 100%;
+			z-index: -1;
+			opacity: .4;
+		}
+
+		.video {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+
+		/*back of cards*/
+		.card-shadow {
+			position: relative;
+			box-shadow: 7px 7px 10px #777;
+			max-width: 450px;
+			transition: all .3s;
+			overflow: hidden;
+		}
+
+		.back {
+			position: absolute;
+			top: -100%;
+			background: white;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			user-select: none;
+			pointer-events: none;
+			transition: top .3s, opacity .3s;
+		}
+
+		.back-content {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.rotate {
+			perspective: 100rem;
+		}
+
+		.rotate:hover .card-shadow {
+			transform: rotateY(180deg);
+		}
+
+		.rotate:hover .back {
+			top: 0;
+			transform: rotateY(180deg);
+			user-select: auto;
+			pointer-events: auto;
+			opacity: 1;
+		}
+
+		/*end of Back cards*/
+		/*start of contacts*/
+		.contact {
+			background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(img/header-bg.jpeg);
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		.bg {
+			background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(img/items-wrapper-bg.jpg) fixed;
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			border-radius: 5px;
+		}
+
+		.floating-line {
+			background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));
+		}
+
+		/*end of contacts*/
+	</style>
+</head>
+
+<body>
+	<!-- Header -->
+	<header class="d-flex align-items-center">
+		<div class="align-self-start position-absolute">
+			<img src="img/book.png" class=" img-fluid m-3" width="130px">
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<h3 class="banner display-4 text-light mb-5">We <img src="img/heart.png" width="210px"
+							class="imges-heart img-fluid"> <span
+							style="font-size: 140px; font-family: algerian; color:red;">R</span>eading</h3>
+					<a href="#" class="px-5 btn btn-outline-danger">CHECK OUT</a>
+				</div>
 			</div>
 		</div>
-<!-- End of title -->
-		<div class="row first-row align-items-end mb-4">
-			<div class="col-lg-3">
-				<a href="img\libraries\library1.jpg"  data-lightbox="library" data-title="THe hashmat made library">
-					<img src="img\libraries\library1.jpg" class="img-gallery img-thumbnail">
-				</a>	
+	</header>
+	<!-- End of header -->
+
+	<!-- start if gallery -->
+	<!-- Start of title -->
+	<section class="gallery">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center my-5">
+					<h1 class="text-secondary font-italic header-title">THE BEST LIBRARY IN THE WORLD</h1>
+				</div>
 			</div>
-			<div class="col-lg-3">
-				<a href="img\libraries\library2.jpg" data-lightbox="library" data-title="THe hashmat made library">
-					<img src="img\libraries\library2.jpg" class="img-gallery img-thumbnail">
-				</a>	
+			<!-- End of title -->
+			<div class="row first-row align-items-end mb-4">
+				<div class="col-lg-3">
+					<a href="img\libraries\library1.jpg" data-lightbox="library" data-title="THe hashmat made library">
+						<img src="img\libraries\library1.jpg" class="img-gallery img-thumbnail">
+					</a>
+				</div>
+				<div class="col-lg-3">
+					<a href="img\libraries\library2.jpg" data-lightbox="library" data-title="THe hashmat made library">
+						<img src="img\libraries\library2.jpg" class="img-gallery img-thumbnail">
+					</a>
+				</div>
+				<div class="col-lg-3">
+					<a href="img\libraries\library3.jpg" data-lightbox="library" data-title="THe hashmat made library">
+						<img src="img\libraries\library3.jpg" class="img-gallery img-thumbnail">
+					</a>
+				</div>
+				<div class="col-lg-3">
+					<a href="img\libraries\library4.jpg" data-lightbox="library" data-title="THe hashmat made library">
+						<img src="img\libraries\library4.jpg" class="img-gallery img-thumbnail">
+					</a>
+				</div>
 			</div>
-			<div class="col-lg-3">
-				<a href="img\libraries\library3.jpg" data-lightbox="library" data-title="THe hashmat made library">
-					<img src="img\libraries\library3.jpg" class="img-gallery img-thumbnail">
-				</a>	
-			</div>
-			<div class="col-lg-3">
-				<a href="img\libraries\library4.jpg" data-lightbox="library" data-title="THe hashmat made library">
-					<img src="img\libraries\library4.jpg" class="img-gallery img-thumbnail">
-				</a>	
+			<div class="row second-row align-items-end mb-4">
+				<div class="col-lg-3">
+					<a href="img\libraries\library5.jpg" data-lightbox="library" data-title="THe hashmat made library">
+						<img src="img\libraries\library5.jpg" class="img-gallery img-thumbnail">
+					</a>
+				</div>
+				<div class="col-lg-3">
+					<a href="img\libraries\library6.jpg" data-lightbox="library" data-title="THe hashmat made library">
+						<img src="img\libraries\library6.jpg" class="img-gallery img-thumbnail">
+					</a>
+				</div>
+				<div class="col-lg-3">
+					<a href="img\libraries\library7.jpg" data-lightbox="library" data-title="THe hashmat made library">
+						<img src="img\libraries\library7.jpg" class="img-gallery img-thumbnail">
+					</a>
+				</div>
+				<div class="col-lg-3">
+					<a href="img\libraries\library8.jpg" data-lightbox="library" data-title="THe hashmat made library">
+						<img src="img\libraries\library8.jpg" class="img-gallery img-thumbnail">
+					</a>
+				</div>
 			</div>
 		</div>
-		<div class="row second-row align-items-end mb-4">
-			<div class="col-lg-3">
-				<a href="img\libraries\library5.jpg" data-lightbox="library" data-title="THe hashmat made library">
-					<img src="img\libraries\library5.jpg" class="img-gallery img-thumbnail">
-				</a>	
-			</div>
-			<div class="col-lg-3">
-				<a href="img\libraries\library6.jpg" data-lightbox="library" data-title="THe hashmat made library">
-					<img src="img\libraries\library6.jpg" class="img-gallery img-thumbnail">
-				</a>	
-			</div>
-			<div class="col-lg-3">
-				<a href="img\libraries\library7.jpg" data-lightbox="library" data-title="THe hashmat made library">
-					<img src="img\libraries\library7.jpg" class="img-gallery img-thumbnail">
-				</a>	
-			</div>
-			<div class="col-lg-3">
-				<a href="img\libraries\library8.jpg" data-lightbox="library" data-title="THe hashmat made library">
-					<img src="img\libraries\library8.jpg" class="img-gallery img-thumbnail">
-				</a>	
+	</section>
+	<!-- starting of gallery -->
+	<!-- famouse writters -->
+	<section class="bg-writers">
+		<div class="container">
+			<!-- start of title for writter -->
+			<div class="row">
+				<div class="col text-center my-5">
+					<h1 class="text-secondary font-italic header-title">THE BEST WRITTERS IN THE WORLD</h1>
+				</div>
 			</div>
 		</div>
-	</div>
-</section>
-<!-- starting of gallery -->
-<!-- famouse writters -->
-<section class="bg-writers">
-	<div class="container">
-<!-- start of title for writter -->
-		<div class="row">
-			<div class="col text-center my-5">
-				<h1 class="text-secondary font-italic header-title">THE BEST WRITTERS IN THE WORLD</h1>
-			</div>
-		</div>
-	</div>	
-<!-- End of title for writter -->
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-lg-4 text-center align-self-center mb-2">
-				<img src="img/writers/William_Shakespeare-book1.jpg" class="hovers-img img-fluid" >
-			</div>
-			<div class="col-lg-4 mb-4">
-				<div class="card">
-					<div class="card-head p-5">
-						<input type="button" class="btn btn-block btn-outline-danger" data-toggle="collapse" data-target="#collapse1" value="William Shakspear" >
-					</div>
-					<div class="collapse" id="collapse1">
-						<div class="card-body">
-							<div class="card">
-								<img src="img/writers/William_Shakespeare.jpg" class="img-fluid">
-									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		<!-- End of title for writter -->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-4 text-center align-self-center mb-2">
+					<img src="img/writers/William_Shakespeare-book1.jpg" class="hovers-img img-fluid">
+				</div>
+				<div class="col-lg-4 mb-4">
+					<div class="card">
+						<div class="card-head p-5">
+							<input type="button" class="btn btn-block btn-outline-danger" data-toggle="collapse"
+								data-target="#collapse1" value="William Shakspear">
+						</div>
+						<div class="collapse" id="collapse1">
+							<div class="card-body">
+								<div class="card">
+									<img src="img/writers/William_Shakespeare.jpg" class="img-fluid">
+									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+										do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 									</p>
-								</div>	
+								</div>
 								<a href="#" class="m-4 btn btn-block btn-primary ml-auto ">MORE BOOKS</a>
 							</div>
 						</div>
 					</div>
-				<div class="card">
-					<div class="card-head p-5">
-						<input type="button" class="btn btn-block btn-outline-danger" data-toggle="collapse" data-target="#collapse2" value="Charles Dekens" >
-					</div>
-					<div class="collapse" id="collapse2">
-						<div class="card-body">
-							<div class="card">
-								<img src="img/writers/Charles_Dickens.jpg" class="img-fluid">
-									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					<div class="card">
+						<div class="card-head p-5">
+							<input type="button" class="btn btn-block btn-outline-danger" data-toggle="collapse"
+								data-target="#collapse2" value="Charles Dekens">
+						</div>
+						<div class="collapse" id="collapse2">
+							<div class="card-body">
+								<div class="card">
+									<img src="img/writers/Charles_Dickens.jpg" class="img-fluid">
+									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+										do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 									</p>
-								</div>	
+								</div>
 								<a href="#" class="m-4 btn btn-block btn-primary ml-auto ">MORE BOOKS</a>
 							</div>
 						</div>
 					</div>
-				<div class="card">
-					<div class="card-head p-5">
-						<input type="button" class="btn btn-block btn-outline-danger" data-toggle="collapse" data-target="#collapse3" value="Jane Austen" >
-					</div>
-					<div class="collapse" id="collapse3">
-						<div class="card-body">
-							<div class="card">
-								<img src="img/writers/Jane_Austen.jpg" class="img-fluid">
-									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					<div class="card">
+						<div class="card-head p-5">
+							<input type="button" class="btn btn-block btn-outline-danger" data-toggle="collapse"
+								data-target="#collapse3" value="Jane Austen">
+						</div>
+						<div class="collapse" id="collapse3">
+							<div class="card-body">
+								<div class="card">
+									<img src="img/writers/Jane_Austen.jpg" class="img-fluid">
+									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+										do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 									</p>
-								</div>	
+								</div>
 								<a href="#" class="m-4 btn btn-block btn-primary ml-auto">MORE BOOKS</a>
 							</div>
 						</div>
 					</div>
-				<div class="card">
-					<div class="card-head p-5">
-						<input type="button" class="btn btn-block btn-outline-danger" data-toggle="collapse" data-target="#collapse4" value="Victor Hugo" >
-					</div>
-					<div class="collapse" id="collapse4">
-						<div class="card-body">
-							<div class="card">
-								<img src="img/writers/Victor_Hugo.jpg" class="img-fluid">
-									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					<div class="card">
+						<div class="card-head p-5">
+							<input type="button" class="btn btn-block btn-outline-danger" data-toggle="collapse"
+								data-target="#collapse4" value="Victor Hugo">
+						</div>
+						<div class="collapse" id="collapse4">
+							<div class="card-body">
+								<div class="card">
+									<img src="img/writers/Victor_Hugo.jpg" class="img-fluid">
+									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+										do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 									</p>
-								</div>	
+								</div>
 								<a href="#" class="m-4 btn btn-block btn-primary ml-auto ">MORE BOOKS</a>
 							</div>
 						</div>
-					</div>	
+					</div>
 				</div>
-			<div class="col-lg-4 text-center align-self-center mb-2">
-				<img src="img/writers/William_Shakespeare-book2.jpg" class="img-fluid hovers-img" >
+				<div class="col-lg-4 text-center align-self-center mb-2">
+					<img src="img/writers/William_Shakespeare-book2.jpg" class="img-fluid hovers-img">
+				</div>
 			</div>
 		</div>
-	</div>
-</section>
-<!-- End of famouse writters -->
-<!--start Suggested bOOks -->
-<section class="Suggest-book">
-	<div class="container-fluid">
-<!-- start of title for writter -->
-		<div class="row">
-			<div class="col text-center my-5">
-				<h1 class="text-secondary font-italic header-title text-light ">Suggested Book</h1>
+	</section>
+	<!-- End of famouse writters -->
+	<!--start Suggested bOOks -->
+	<section class="Suggest-book">
+		<div class="container-fluid">
+			<!-- start of title for writter -->
+			<div class="row">
+				<div class="col text-center my-5">
+					<h1 class="text-secondary font-italic header-title text-light ">Suggested Book</h1>
+				</div>
+			</div>
+			<!-- End of title for writter -->
+			<div class="row">
+				<div class="col-lg-6 col-sm-8 col-md-8 mx-auto books">
+					<a href="#">
+						<img src="img/suggested-books/book1.jpg" class="book book1 img-fluid">
+					</a>
+					<a href="#">
+						<img src="img/suggested-books/book2.jpg" class="book book2 img-fluid">
+					</a>
+					<a href="#">
+						<img src="img/suggested-books/book3.jpg" class="book book3 img-fluid">
+					</a>
+					<a href="#">
+						<img src="img/suggested-books/book4.jpg" class="book book4 img-fluid">
+					</a>
+				</div>
 			</div>
 		</div>
-<!-- End of title for writter -->
-		<div class="row">
-			<div class="col-lg-6 col-sm-8 col-md-8 mx-auto books">
-				<a href="#">
-				<img src="img/suggested-books/book1.jpg" class="book book1 img-fluid">
-				</a>
-				<a href="#">
-				<img src="img/suggested-books/book2.jpg" class="book book2 img-fluid">
-				</a>
-				<a href="#">
-				<img src="img/suggested-books/book3.jpg" class="book book3 img-fluid">
-				</a>
-				<a href="#">
-				<img src="img/suggested-books/book4.jpg" class="book book4 img-fluid">
-				</a>
-			</div>
-		</div>
-	</div>
-</section>
-<!--End Suggested bOOks -->
-<!-- Start Popular bOoks -->
-<section class="sec-video p-5">
-	<div class="bg-video">
-		<video class="video" autoplay loop muted>
-			<source src="video/Lulu_latte.mp4" type="video/mp4" >
-			<source src="video/Lulu_latte.webm" type="video/webm">
+	</section>
+	<!--End Suggested bOOks -->
+	<!-- Start Popular bOoks -->
+	<section class="sec-video p-5">
+		<div class="bg-video">
+			<video class="video" autoplay loop muted>
+				<source src="video/Lulu_latte.mp4" type="video/mp4">
+				<source src="video/Lulu_latte.webm" type="video/webm">
 				Your Browser Doesnt support
-		</video>
-	</div>
-<div class="container">
-<!-- start of title for writter -->
-		<div class="row">
-			<div class="col text-center mb-2 mt-1">
-				<h1 class="text-secondary font-italic header-title">THE Most Popular Book in Week</h1>
+			</video>
+		</div>
+		<div class="container">
+			<!-- start of title for writter -->
+			<div class="row">
+				<div class="col text-center mb-2 mt-1">
+					<h1 class="text-secondary font-italic header-title">THE Most Popular Book in Week</h1>
+				</div>
 			</div>
 		</div>
-	</div>	
-<!-- End of title for writter -->	
-	<div class="row">
-		<div class="col-md-4 mb-2 mx-auto col-xl-3 col-sm-8 rotate">
-			<div class="card card-shadow">
+		<!-- End of title for writter -->
+		<div class="row">
+			<div class="col-md-4 mb-2 mx-auto col-xl-3 col-sm-8 rotate">
+				<div class="card card-shadow">
 					<div class="card-header text-center">
 						<h4 class="font-weight-light">A tale of Two Cities</h4>
 					</div>
-				<div class="card-body text-center">
-					<img src="img/Popular-Books/A-Tale-of-Two-Cities.jpg" class="img-fluid rounded">
-				</div>
-				<div class="card-footer text-center">
-					<h6 class="font-weight-light">By Charles Dekens</h6>
-				</div>
-				<div class="card-subtitle back text-center">
-					<div class="back-content">	
-						<h3 class="font-weight-light font-italic my-1">ONLY FOR</h3>
-						<h4>20$</h4>
-						<h4><del>100$</del></h4>
-						<button class="btn btn-outline-success" type="button" >Buy Now</button>
+					<div class="card-body text-center">
+						<img src="img/Popular-Books/A-Tale-of-Two-Cities.jpg" class="img-fluid rounded">
+					</div>
+					<div class="card-footer text-center">
+						<h6 class="font-weight-light">By Charles Dekens</h6>
+					</div>
+					<div class="card-subtitle back text-center">
+						<div class="back-content">
+							<h3 class="font-weight-light font-italic my-1">ONLY FOR</h3>
+							<h4>20$</h4>
+							<h4><del>100$</del></h4>
+							<button class="btn btn-outline-success" type="button">Buy Now</button>
+						</div>
 					</div>
 				</div>
-			</div>	
-		</div>
-		<div class="col-md-4 mb-2 mx-auto col-xl-3 col-sm-8 rotate">
-			<div class="card card-shadow">
+			</div>
+			<div class="col-md-4 mb-2 mx-auto col-xl-3 col-sm-8 rotate">
+				<div class="card card-shadow">
 					<div class="card-header text-center">
 						<h4 class="font-weight-light">Don Quixote</h4>
 					</div>
-				<div class="card-body text-center">
-					<img src="img/Popular-Books/Don-Quixote.jpg" class="img-fluid rounded">
-				</div>
-				<div class="card-footer text-center">
-					<h6 class="font-weight-light">By Micheal Dequice</h6>
-				</div>
-				<div class="card-subtitle back text-center">
-					<div class="back-content">	
-						<h3 class="font-weight-light font-italic my-1">ONLY FOR</h3>
-						<h4>30$</h4>
-						<h4><del>150$</del></h4>
-						<button class="btn btn-outline-success" type="button" >Buy Now</button>
+					<div class="card-body text-center">
+						<img src="img/Popular-Books/Don-Quixote.jpg" class="img-fluid rounded">
+					</div>
+					<div class="card-footer text-center">
+						<h6 class="font-weight-light">By Micheal Dequice</h6>
+					</div>
+					<div class="card-subtitle back text-center">
+						<div class="back-content">
+							<h3 class="font-weight-light font-italic my-1">ONLY FOR</h3>
+							<h4>30$</h4>
+							<h4><del>150$</del></h4>
+							<button class="btn btn-outline-success" type="button">Buy Now</button>
+						</div>
 					</div>
 				</div>
-			</div>	
-		</div>
-		<div class="col-md-4 mb-2 mx-auto col-xl-3 col-sm-8 rotate">
-			<div class="card card-shadow">
+			</div>
+			<div class="col-md-4 mb-2 mx-auto col-xl-3 col-sm-8 rotate">
+				<div class="card card-shadow">
 					<div class="card-header text-center">
 						<h4 class="font-weight-light">One Hundred Year</h4>
 					</div>
-				<div class="card-body text-center">
-					<img src="img/Popular-Books/One-Hundred-Years-of-Solitude.jpg" class="img-fluid rounded">
-				</div>
-				<div class="card-footer text-center">
-					<h6 class="font-weight-light">By Gabril Garcia Markez</h6>
-				</div>
-				<div class="card-subtitle back text-center">
-					<div class="back-content">
-						<h3 class="font-weight-light font-italic my-1">ONLY FOR</h3>
-						<h4>15$</h4>
-						<h4><del>120$</del></h4>
-						<button class="btn btn-outline-success" type="button" >Buy Now</button>
-					</div>	
-				</div>
-			</div>	
-		</div>
-	</div>
-</div>	
-</section>
-<!-- End Popular bOoks -->
-<!-- start of contacts -->
-<section class="contact py-5">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-xl-5 col-sm-8 col-10">
-				<div class="row bg p-5">
-					<div class="col-sm-4 col-8 text-light floating-line">
-						<a href="#"><i class="fab fa-linkedin"></i>Connect by linkin</a>
+					<div class="card-body text-center">
+						<img src="img/Popular-Books/One-Hundred-Years-of-Solitude.jpg" class="img-fluid rounded">
 					</div>
-					<div class="col-sm-4 col-8 second-line floating-line">
-						<a href="#"><i class="fab fa-facebook"></i>Share Idea</a>
+					<div class="card-footer text-center">
+						<h6 class="font-weight-light">By Gabril Garcia Markez</h6>
 					</div>
-					<div class="col-sm-4 col-8 third-line floating-line">
-						<h4>New Books</h4>
-					</div>
-					<div class="col-sm-4 col-8 fourth-line floating-line">
-						
-					</div>
-					<div class="col-sm-4 col-8 fourth-line floating-line">
-						
+					<div class="card-subtitle back text-center">
+						<div class="back-content">
+							<h3 class="font-weight-light font-italic my-1">ONLY FOR</h3>
+							<h4>15$</h4>
+							<h4><del>120$</del></h4>
+							<button class="btn btn-outline-success" type="button">Buy Now</button>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-xl-5 col-sm-8 col-10">
-				
+		</div>
+		</div>
+	</section>
+	<!-- End Popular bOoks -->
+	<!-- start of contacts -->
+	<section class="contact py-5">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-5 col-sm-8 col-10">
+					<div class="row bg p-5">
+						<div class="col-sm-4 col-8 text-light floating-line">
+							<a href="#"><i class="fab fa-linkedin"></i>Connect by linkin</a>
+						</div>
+						<div class="col-sm-4 col-8 second-line floating-line">
+							<a href="#"><i class="fab fa-facebook"></i>Share Idea</a>
+						</div>
+						<div class="col-sm-4 col-8 third-line floating-line">
+							<h4>New Books</h4>
+						</div>
+						<div class="col-sm-4 col-8 fourth-line floating-line">
+
+						</div>
+						<div class="col-sm-4 col-8 fourth-line floating-line">
+
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-5 col-sm-8 col-10">
+
+				</div>
 			</div>
 		</div>
-	</div>
-</section>
-<!-- End of Contacts -->
-</body>	
+	</section>
+	<!-- End of Contacts -->
+</body>
+
 </html>
